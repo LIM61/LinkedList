@@ -1,0 +1,16 @@
+public class TestLinkedList {
+
+		public static void main(String [] args) {
+		LinkedList myLinkedList = new LinkedList();
+		Node m = new Node("Ed", null);
+		Node n = new Node("Mary", null);
+		Node p  = new Node("Anne", null);
+		// insert nodes
+		myLinkedList.addFirst(m);
+		myLinkedList.addFirst(n);
+		myLinkedList.addFirst(p);
+		// print LinkedList
+		System.out.println(myLinkedList.toString());
+		System.out.println("size = " + myLinkedList.getSize());
+		} // end main
+		} // end TestLinkedList
