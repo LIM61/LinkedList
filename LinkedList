@@ -1,0 +1,36 @@
+public class LinkedList {
+
+	    protected Node head; // head node of the list
+		protected Node tail; // tail node of the list
+		protected long Size; // number of nodes in the list
+
+		public LinkedList() { //Constructor
+		head = null;
+		tail = null;
+		Size = 0;
+		} // end construction
+		
+		 public void addFirst (Node newnode) {
+				 newnode.setNext(head);
+				 head = newnode;
+				 // change our Size
+				 Size = Size + 1;
+				 } // add, First at front
+
+
+			
+		public String toString() {
+		String output = " "; //empty string
+		Node next_item = head;
+		while (next_item != null) 
+		{
+		output = output + "" + next_item.getElement() + "" + next_item.getNext();
+		next_item = next_item.getNext();
+		} // end of while
+		output = output + "done";
+		return output;
+		} // to string
+		public long getSize() {
+		return Size;
+		} // end of getSize()
+		} // end class of LinkedList
