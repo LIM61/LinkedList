@@ -1,31 +1,28 @@
 public class LinkedList {
-
+// instance variables of the LinkedList
 	    protected Node head; // head node of the list
 		protected Node tail; // tail node of the list
 		protected long Size; // number of nodes in the list
 
 		public LinkedList() { //Constructor
-		head = null;
-		tail = null;
-		Size = 0;
+		head = null; // head node of the list(or null if empty)
+		tail = null; // last node of the list(or null if empty)
+		Size = 0; // number of nodes in the list
 		} // end construction
 		
-		 public void addFirst (Node newnode) {
-				 newnode.setNext(head);
-				 head = newnode;
-				 // change our Size
-				 Size = Size + 1;
-				 } // add, First at front
+		 public void addFirst (Node newnode) { // add element to the front of the list
+				 newnode.setNext(head); // create new node instance storing reference to element
+				 head = newnode; // set variable head to reference the new node
+				 Size = Size + 1; // increment the node count
+				 } 
 
-
-			
-		public String toString() {
+        public String toString() {
 		String output = " "; //empty string
 		Node next_item = head;
 		while (next_item != null) 
 		{
 		output = output + "" + next_item.getElement() + "" + next_item.getNext();
-		next_item = next_item.getNext();
+		next_item = next_item.getNext(); // traverse the list
 		} // end of while
 		output = output + "done";
 		return output;
